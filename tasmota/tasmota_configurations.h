@@ -245,9 +245,9 @@
 #undef CODE_IMAGE_STR
 #define CODE_IMAGE_STR "knx"
 
-#ifndef USE_KNX
-#define USE_KNX                                  // Enable KNX IP Protocol Support (+23k code, +3k3 mem)
-#endif
+// #ifndef USE_KNX
+// #define USE_KNX                                  // Enable KNX IP Protocol Support (+23k code, +3k3 mem)
+// #endif
 #undef USE_EMULATION                             // Disable Belkin WeMo and Hue Bridge emulation for Alexa (-16k code, -2k mem)
 #undef USE_EMULATION_HUE                         // Disable Hue Bridge emulation for Alexa (+14k code, +2k mem common)
 #undef USE_EMULATION_WEMO                        // Disable Belkin WeMo emulation for Alexa (+6k code, +2k mem common)
