@@ -1126,6 +1126,15 @@ bool XsnsCall(uint8_t Function) {
 
       result = xsns_func_ptr[x](Function);
 
+      if (Function == FUNC_INIT) {
+        Serial.print("Called ");
+        Serial.print(x);
+        Serial.print(" f=");
+        Serial.print(Function);
+        Serial.print(" res=");
+        Serial.println(result);
+      }
+
 #ifdef USE_PROFILE_FUNCTION
 #ifdef XFUNC_PTR_IN_ROM
       uint32_t index = pgm_read_byte(kXsnsList + x);

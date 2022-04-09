@@ -177,11 +177,20 @@ bool Bh1730Read(void)
 
 void Bh1730Detect(void)
 {
+  pinMode(23, OUTPUT);
+  digitalWrite(23, HIGH);
+  delay(10);
+
+  Serial.println("Bh1730 detect");
   if (!I2cSetDevice(BH1730_ADDR)) { return; }
 
+  Serial.println("Bh1730 SetDeviceOK");
   if (Bh1730Read()) {
     I2cSetActiveFound(BH1730_ADDR, Bh1730.name);
     Bh1730.count = 1;
+    Serial.println("Bh1730 Found");
+  } else {
+    Serial.println("Bh1730 NOT FOUND");
   }
 }
 
@@ -200,10 +209,10 @@ void Bh1730Show(bool json)
   if (Bh1730.valid) { 
 
     if (json) {
-      ResponseAppend_P(PSTR(",\"%s\":{\"lux\": %*_f}"), Bh1730.name, Bh1730.lx);
+      ResponseAppend_P(PSTR(",\"%s\":{\"lux\": %f}"), Bh1730.name, (int) Bh1730.lx);
 #ifdef USE_WEBSERVER
     } else {
-      WSContentSend_PD(HTTP_SNS_ILLUMINANCE, Bh1730.name, 2, &Bh1730.lx);
+      WSContentSend_PD(HTTP_SNS_ILLUMINANCE, Bh1730.name, (int)Bh1730.lx);
 #endif  // USE_WEBSERVER
     }
   }

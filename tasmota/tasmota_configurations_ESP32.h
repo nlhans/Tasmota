@@ -280,38 +280,38 @@
 
 #ifdef FIRMWARE_TASMOTA32
 
-#define USE_INFLUXDB                             // Enable influxdb support (+5k code)
+// #define USE_INFLUXDB                             // Enable influxdb support (+5k code)
 
 #define USE_ENHANCED_GUI_WIFI_SCAN
 
-#define USE_SDCARD
+// #define USE_SDCARD
 
-#define ROTARY_V1                                // Add support for Rotary Encoder as used in MI Desk Lamp
+// #define ROTARY_V1                                // Add support for Rotary Encoder as used in MI Desk Lamp
 
-#define USE_TUYA_MCU                             // Add support for Tuya Serial MCU
-#ifndef TUYA_DIMMER_ID
-  #define TUYA_DIMMER_ID       0                 // Default dimmer Id
-#endif
-#undef USE_ARMTRONIX_DIMMERS                    // Disable support for Armtronix Dimmers (+1k4 code)
-#undef USE_PS_16_DZ                             // Disable support for PS-16-DZ Dimmer (+2k code)
-#undef USE_SONOFF_IFAN                          // Disable support for Sonoff iFan02 and iFan03 (+2k code)
-#define USE_BUZZER                               // Add support for a buzzer (+0k6 code)
-#undef USE_ARILUX_RF                            // Disable support for Arilux RF remote controller (+0k8 code, 252 iram (non 2.3.0))
-#define USE_DEEPSLEEP                            // Add support for deepsleep (+1k code)
-#undef USE_EXS_DIMMER                           // Disable support for EX-Store WiFi Dimmer
+// #define USE_TUYA_MCU                             // Add support for Tuya Serial MCU
+// #ifndef TUYA_DIMMER_ID
+//   #define TUYA_DIMMER_ID       0                 // Default dimmer Id
+// #endif
+// #undef USE_ARMTRONIX_DIMMERS                    // Disable support for Armtronix Dimmers (+1k4 code)
+// #undef USE_PS_16_DZ                             // Disable support for PS-16-DZ Dimmer (+2k code)
+// #undef USE_SONOFF_IFAN                          // Disable support for Sonoff iFan02 and iFan03 (+2k code)
+// #define USE_BUZZER                               // Add support for a buzzer (+0k6 code)
+// #undef USE_ARILUX_RF                            // Disable support for Arilux RF remote controller (+0k8 code, 252 iram (non 2.3.0))
+// #define USE_DEEPSLEEP                            // Add support for deepsleep (+1k code)
+// #undef USE_EXS_DIMMER                           // Disable support for EX-Store WiFi Dimmer
 //#define USE_HOTPLUG                              // Add support for sensor HotPlug
 //#undef USE_DEVICE_GROUPS                        // Disable support for device groups (+5k6 code)
-#undef USE_PWM_DIMMER                           // Disable support for MJ-SD01/acenx/NTONPOWER PWM dimmers (+4k5 code)
-#undef USE_KEELOQ                               // Disable support for Jarolift rollers by Keeloq algorithm (+4k5 code)
-#undef USE_SONOFF_D1                            // Disable support for Sonoff D1 Dimmer (+0k7 code)
-#undef USE_SHELLY_DIMMER                        // Disable support for Shelly Dimmer (+3k code)
+// #undef USE_PWM_DIMMER                           // Disable support for MJ-SD01/acenx/NTONPOWER PWM dimmers (+4k5 code)
+// #undef USE_KEELOQ                               // Disable support for Jarolift rollers by Keeloq algorithm (+4k5 code)
+// #undef USE_SONOFF_D1                            // Disable support for Sonoff D1 Dimmer (+0k7 code)
+// #undef USE_SHELLY_DIMMER                        // Disable support for Shelly Dimmer (+3k code)
 
 #define USE_LIGHT_PALETTE                        // Add support for color palette (+0k9 code)
 
-#define USE_DS18x20                              // Add support for DS18x20 sensors with id sort, single scan and read retry (+1k3 code)
+// #define USE_DS18x20                              // Add support for DS18x20 sensors with id sort, single scan and read retry (+1k3 code)
 
 #define USE_I2C                                  // I2C using library wire (+10k code, 0k2 mem, 124 iram)
-#define USE_SHT                                // [I2cDriver8] Enable SHT1X sensor (+1k4 code)
+// #define USE_SHT                                // [I2cDriver8] Enable SHT1X sensor (+1k4 code)
 // #define USE_HTU                                // [I2cDriver9] Enable HTU21/SI7013/SI7020/SI7021 sensor (I2C address 0x40) (+1k5 code)
 // #define USE_BMP                                // [I2cDriver10] Enable BMP085/BMP180/BMP280/BME280 sensors (I2C addresses 0x76 and 0x77) (+4k4 code)
 //   #define USE_BME68X                           // Enable support for BME680/BME688 sensor using Bosch BME68x library (+6k9 code)
@@ -352,7 +352,7 @@
 //#define USE_PAJ7620                            // [I2cDriver34] Enable PAJ7620 gesture sensor (I2C address 0x73) (+2.5k code)
 //#define USE_PCF8574                            // [I2cDriver2] Enable PCF8574 I/O Expander (I2C addresses 0x20 - 0x26 and 0x39 - 0x3F) (+1k9 code)
 // #define USE_HIH6                               // [I2cDriver36] Enable Honeywell HIH Humidity and Temperature sensor (I2C address 0x27) (+0k6)
-#define USE_DHT12                              // [I2cDriver41] Enable DHT12 humidity and temperature sensor (I2C address 0x5C) (+0k7 code)
+// #define USE_DHT12                              // [I2cDriver41] Enable DHT12 humidity and temperature sensor (I2C address 0x5C) (+0k7 code)
 // #define USE_DS1624                             // [I2cDriver42] Enable DS1624, DS1621 temperature sensor (I2C addresses 0x48 - 0x4F) (+1k2 code)
 //#define USE_AHT1x                              // [I2cDriver43] Enable AHT10/15 humidity and temperature sensor (I2C address 0x38, 0x39) (+0k8 code)
 //#define USE_AHT2x                              // [I2cDriver43] Enable AHT20 instead of AHT1x humidity and temperature sensor (I2C address 0x38) (+0k8 code)
