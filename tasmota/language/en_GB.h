@@ -202,6 +202,7 @@
 #define D_WEB_SERVER "Web Server"
 #define D_SOC "State of Charge"
 #define D_SOH "State of Health"
+#define D_SOIL_CAPACITANCE "Soil Capacitance"
 
 // tasmota.ino
 #define D_WARNING_MINIMAL_VERSION "WARNING This version does not support persistent settings"
@@ -905,6 +906,7 @@
 #define D_UNIT_WATT "W"
 #define D_UNIT_WATTHOUR "Wh"
 #define D_UNIT_WATT_METER_QUADRAT "W/m²"
+#define D_UNIT_PICOFARAD "pF"
 
 #define D_NEW_ADDRESS          "Setting address to"
 #define D_OUT_OF_RANGE         "Out of Range"

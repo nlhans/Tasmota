@@ -89,7 +89,7 @@ void Shtc3Detect(void)
 
 void Shtc3EverySecond(void)
 {
-  if (TasmotaGlobal.uptime &1) {
+  if ((TasmotaGlobal.uptime % 10) == 0) {
     // SHTC3: 11mS
     if (!Shtc3Read()) {
       AddLogMissed(Shtc3.name, Shtc3.valid);
