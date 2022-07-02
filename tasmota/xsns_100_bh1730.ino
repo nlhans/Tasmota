@@ -209,7 +209,7 @@ void Bh1730Show(bool json)
   if (Bh1730.valid) { 
 
     if (json) {
-      ResponseAppend_P(PSTR(",\"%s\":{\"lux\": %f}"), Bh1730.name, (int) Bh1730.lx);
+      ResponseAppend_P(PSTR(",\"%s\":{\"lux\": %f}"), Bh1730.name, Bh1730.lx);
 #ifdef USE_WEBSERVER
     } else {
       WSContentSend_PD(HTTP_SNS_ILLUMINANCE, Bh1730.name, (int)Bh1730.lx);
